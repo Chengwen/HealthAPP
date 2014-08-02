@@ -65,6 +65,7 @@ public class MainActivity extends Activity {
         vf.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out_left));
 
         /*
+		setContentView(R.layout.join); 
 		Button button = (Button)findViewById(R.id.button1);
 		button.setOnClickListener(new View.OnClickListener() {  
 		    @Override
@@ -77,6 +78,7 @@ public class MainActivity extends Activity {
 		    }
 		});
         */
+        
 	}
 
 

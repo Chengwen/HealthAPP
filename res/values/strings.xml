@@ -10,5 +10,20 @@
     <string name="continue1">Continue</string>
     <string name="email">Email</string>
     <string name="pwd">Password</string>
+    <string name="textView_name">Name</string>
+    <string name="textView_gender">Gender</string>
+    <string name="textView_birthday">Birthday</string>
+    <string name="textView_height">Height</string>
+    <string name="textView_weight">Weight</string>
+    
+    <string-array name="spinner_height">
+        <item>feet</item>
+        <item>cm</item>
+    </string-array>
+    
+    <string-array name="spinner_weight">
+        <item>lbs</item>
+        <item>kg</item>
+    </string-array>
 
 </resources>
