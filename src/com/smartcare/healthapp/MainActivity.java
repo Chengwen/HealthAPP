@@ -1,6 +1,5 @@
 package com.smartcare.healthapp;
 
-import com.smartcare.healthapp.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
