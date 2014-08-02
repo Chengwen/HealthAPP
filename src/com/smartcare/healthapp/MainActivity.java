@@ -11,8 +11,8 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main); 
-		
+		setContentView(R.layout.join); 
+		/*
 		Button button = (Button)findViewById(R.id.button1);
 		button.setOnClickListener(new View.OnClickListener() {  
 		    @Override
@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
 		        //设置切换动画，从右边进入，左边退出
 		        overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);                
 		    }
-		});
+		});*/
         
 	}
 
