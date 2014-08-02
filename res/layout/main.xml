@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/gradient_dark_orange"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/RelativeLayout"
     android:orientation="vertical" >
-
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:background="@drawable/gradient_dark_green"
+    android:id="@+id/LinearLayoutmain2"
+    android:orientation="vertical" >
+    </LinearLayout>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_dark_pink"
+    android:id="@+id/LinearLayoutmain3"
+    android:orientation="vertical" >
+    </LinearLayout>
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
          /> 
-
-</LinearLayout>
+<ViewFlipper android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/viewFlipper1">
+        <include android:id="@+id/layout1" layout="@layout/layout1"></include>
+        <include android:id="@+id/layout2" layout="@layout/layout2"></include>
+</ViewFlipper>
+</RelativeLayout>
