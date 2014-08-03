@@ -16,31 +16,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
-public class MainActivity extends Activity {
+public class JoinActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		 //Remove title bar
 	    this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-	    
-		setContentView(R.layout.join); 
-        //设置切换动画，从右边进入，左边退出
-            
 
-        /*
-		Button button = (Button)findViewById(R.id.button1);
-		button.setOnClickListener(new View.OnClickListener() {  
-		    @Override
-		    public void onClick(View v) {
-		        Intent intent = new Intent();
-		        intent.setClass(MainActivity.this, PageBActivity.class);
-		        startActivity(intent);
-		        //设置切换动画，从右边进入，左边退出
-		        overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);                
-		    }
-		});
-        */
+		setContentView(R.layout.join); 
         
 	}
 

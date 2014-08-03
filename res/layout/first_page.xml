@@ -17,32 +17,62 @@
 	    android:id="@+id/LinearLayoutmain2"
 	    android:orientation="vertical" >
 	    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:gravity="bottom"
         android:orientation="vertical" >
-        
-		<ViewFlipper android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/viewFlipper1">
-		        <include android:id="@+id/layout1" layout="@layout/layout1"></include>
-		        <include android:id="@+id/layout2" layout="@layout/layout2"></include>
-		        <include android:id="@+id/layout3" layout="@layout/layout3"></include>
-		        <include android:id="@+id/layout4" layout="@layout/layout4"></include>
-		        <include android:id="@+id/layout5" layout="@layout/layout5"></include>
-		</ViewFlipper>
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/layout1"
+                layout="@layout/layout1" />
+
+            <include
+                android:id="@+id/layout2"
+                layout="@layout/layout2" />
+
+            <include
+                android:id="@+id/layout3"
+                layout="@layout/layout3" />
+
+            <include
+                android:id="@+id/layout4"
+                layout="@layout/layout4" />
+
+            <include
+                android:id="@+id/layout5"
+                layout="@layout/layout5" />
+        </ViewFlipper>
 
         <Button
             android:id="@+id/join"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/join" />
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/transparent_background"
+            android:text="@string/join"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
         
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/login"/>
+            android:layout_height="40dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/transparent_background"
+            android:text="@string/login"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
 
     </LinearLayout>
 

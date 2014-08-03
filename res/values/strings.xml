@@ -5,7 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="join">Join</string>
-    <string name="login">Login</string>
+    <string name="login">Log In</string>
     <string name="forgotpwd"><u>Forgot Password?</u></string>
     <string name="continue1">Continue</string>
     <string name="email">Email</string>

@@ -43,26 +43,24 @@ public class FirstActivity extends Activity {
             case 1:      
             	Log.d("dd","timer");
 
-            	// 点击读取下一个视图元素
+            	// Switch views
                 vf.showNext();
                
-                
-                
                 final View l1 = findViewById(R.id.LinearLayoutmain1);
                 final View l2 = findViewById(R.id.LinearLayoutmain2);
                 
                 if(currLayout<4)
                 {
-                	l2.setBackgroundResource(backgroundColorLists[currLayout]);//当前颜色层设为最上层
-                	l2.setVisibility(View.VISIBLE);//设为显示
-                	l1.setBackgroundResource(backgroundColorLists[currLayout+1]);//设置下一个层的背景色
+                	l2.setBackgroundResource(backgroundColorLists[currLayout]);//set current layer as first layer
+                	l2.setVisibility(View.VISIBLE);//set visible
+                	l1.setBackgroundResource(backgroundColorLists[currLayout+1]);//set next layer
                     currLayout++;
                 }
                 else //==4
                 {	
-                	l2.setBackgroundResource(backgroundColorLists[currLayout]);//当前颜色层设为最上层
-                	l2.setVisibility(View.VISIBLE);//设为显示
-                	l1.setBackgroundResource(backgroundColorLists[0]);//设置下一个层的背景色
+                	l2.setBackgroundResource(backgroundColorLists[currLayout]);//set current layer as first layer
+                	l2.setVisibility(View.VISIBLE);//set visible
+                	l1.setBackgroundResource(backgroundColorLists[0]);//set next layer
                 	currLayout=0;
                 }
            
@@ -123,9 +121,19 @@ public class FirstActivity extends Activity {
 
          
         timer.schedule(task, 0,2500);
-        
-        
-        
+
+        findViewById(R.id.join).setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Inform the user the button has been clicked
+            	Intent intent = new Intent();
+		        intent.setClass(FirstActivity.this, JoinActivity.class);
+		        startActivity(intent);
+		        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);   
+            }
+        });
+         
+
         /*
 		setContentView(R.layout.join); 
 		Button button = (Button)findViewById(R.id.button1);
