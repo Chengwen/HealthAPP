@@ -16,35 +16,38 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center_horizontal"
-             android:text="Large Text"
+             android:text="Let's get started"
+             android:layout_marginTop="20dp"
+             android:layout_marginBottom="20dp"
              android:textColor="#ffffff"
              android:textAppearance="?android:attr/textAppearanceLarge" />
        
       <LinearLayout
           android:id="@+id/linearLayout2"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="30dp"
           android:orientation="horizontal"
           android:background="@color/transparent_background"
-          android:paddingBottom="5dp"
-          android:paddingTop="5dp" >
+>
         
         <TextView
-             android:id="@+id/textView2"
-             android:layout_width="120dp"
-             android:textColor="#ffffff"
-             android:text="@string/email"
-             android:textSize="25sp"
-             android:layout_height="40dp"
-             android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:id="@+id/textView2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/email"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/email2"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
             android:background="@android:color/transparent"
             android:ems="10"
-            android:layout_weight="1"
             android:inputType="textEmailAddress" >
 
             <requestFocus />
@@ -54,27 +57,27 @@
        <LinearLayout
            android:id="@+id/linearLayout3"
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"
+           android:layout_height="30dp"
+           android:background="@color/transparent_background"
            android:orientation="horizontal"
-           android:paddingBottom="5dp"
-           android:paddingTop="5dp" 
-           android:background="@color/transparent_background">
+           android:layout_marginTop="1dp">
 
-        <TextView
-             android:id="@+id/textView3"
-             android:layout_height="40dp"
-             android:layout_width="120dp"
-             android:textColor="#ffffff"
-             android:text="@string/pwd"
-             android:textSize="25sp"
-             android:textAppearance="?android:attr/textAppearanceLarge" />
+		<TextView
+		    android:id="@+id/textView3"
+		    android:layout_width="120dp"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:paddingLeft="10dp"
+		    android:text="@string/pwd"
+		    android:textAppearance="?android:attr/textAppearanceLarge"
+		    android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/pwd"
-            android:layout_height="40dp"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:textSize="25sp"
             android:background="@android:color/transparent"
             android:ems="10"
             android:inputType="textPassword" />
@@ -85,6 +88,7 @@
             android:id="@+id/continue1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_marginTop="5dp"
             android:background="@color/transparent_background"
             android:text="@string/continue1"
             android:textColor="#ffffff"
