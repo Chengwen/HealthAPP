@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/linearLayout2">
- 
-        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/textView3" android:gravity="center" android:text="3">
-        </TextView>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android1:src="@drawable/red_icon" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/heart_rate_measure"
+        android:textColor="#ffffff"
+        android:textSize="28sp" >
+    </TextView>
+
 </LinearLayout>

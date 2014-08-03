@@ -3,8 +3,6 @@ package com.smartcare.healthapp.heartrate;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.smartcare.healthapp.R;
-import com.smartcare.healthapp.R.id;
-import com.smartcare.healthapp.R.layout;
 
 import android.app.Activity;
 import android.content.Context;
@@ -24,8 +22,6 @@ import android.widget.TextView;
 /**
  * This class extends Activity to handle a picture preview, process the preview
  * for a red values and determine a heart beat.
- * 
- * @author Justin Wetherell <phishman3579@gmail.com>
  */
 public class HeartRateMonitor extends Activity {
 	
@@ -199,7 +195,7 @@ public class HeartRateMonitor extends Activity {
                     }
                 }
                 int beatsAvg = (beatsArrayAvg / beatsArrayCnt);
-                text.setText(String.valueOf(beatsAvg));
+                text.setText(String.valueOf(beatsAvg)+ " bpm");
                 startTime = System.currentTimeMillis();
                 beats = 0;
             }

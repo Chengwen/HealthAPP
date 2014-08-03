@@ -8,25 +8,49 @@
 	<LinearLayout android:id="@+id/top"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:orientation="horizontal" 
+        android:orientation="vertical" 
         android:layout_width="fill_parent" 
-        android:layout_height="200dp">
-        <TextView android:id="@+id/text"
-            android:text="0"
-            android:textSize="32dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">        
-        </TextView>
-        <RelativeLayout
-	        android:orientation="horizontal" 
+        android:layout_height="wrap_content"> 
+        <LinearLayout
+	        android:orientation="vertical" 
 	        android:layout_width="fill_parent"
-	        android:layout_height="fill_parent">
+	        android:layout_height="40dp"
+	        android:layout_marginTop="25dp"
+	        >
+	        <TextView android:id="@+id/textheart_rate_measure"
+	            android:textSize="28sp"
+	            android:text="@string/heart_rate_measure"
+            	android:textColor="#ffffff"
+	            android:layout_gravity="center_horizontal"
+	            android:gravity="center_horizontal"
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dp">        
+	        </TextView>
+        </LinearLayout>
+        <LinearLayout
+	        android:orientation="vertical" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="168dp">
 	        <com.smartcare.healthapp.heartrate.HeartbeatView android:id="@+id/image"
-	        	android:layout_centerInParent="true"
 	            android:layout_width="wrap_content"
 		        android:layout_height="wrap_content">
 		    </com.smartcare.healthapp.heartrate.HeartbeatView>
-	    </RelativeLayout>
+	    </LinearLayout>
+        <LinearLayout
+	        android:orientation="vertical" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="40dp"
+	        >
+	        <TextView android:id="@+id/text"
+	            android:textSize="28sp"
+	            android:text="@string/measuring"
+	            android:layout_gravity="center_horizontal"
+	            android:gravity="center_horizontal"
+	            android:layout_width="fill_parent"
+           		android:textColor="#ffffff"
+	            android:layout_height="40dp">        
+	        </TextView>
+        </LinearLayout>
     </LinearLayout>
 	<SurfaceView android:id="@+id/preview"
 		android:layout_width="1dp"

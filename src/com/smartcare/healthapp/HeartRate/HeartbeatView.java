@@ -1,7 +1,6 @@
 package com.smartcare.healthapp.heartrate;
 
 import com.smartcare.healthapp.R;
-import com.smartcare.healthapp.R.drawable;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,7 +15,6 @@ import android.view.View;
 /**
  * This class extends the View class and is designed draw the heartbeat image.
  * 
- * @author Justin Wetherell <phishman3579@gmail.com>
  */
 public class HeartbeatView extends View {
 

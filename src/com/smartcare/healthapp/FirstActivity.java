@@ -120,7 +120,7 @@ public class FirstActivity extends Activity {
         vf.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out_left));
 
          
-        timer.schedule(task, 0,2500);
+        timer.schedule(task, 0,2750);
 
         findViewById(R.id.join).setOnClickListener( new View.OnClickListener() {
             @Override
