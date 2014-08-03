@@ -1,4 +1,4 @@
-package com.smartcare.healthapp.HeartRate;
+package com.smartcare.healthapp.heartrate;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 

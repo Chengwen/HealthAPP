@@ -1,4 +1,4 @@
-package com.smartcare.healthapp.HeartRate;
+package com.smartcare.healthapp.heartrate;
 
 /**
  * This abstract class is used to process images.

@@ -3,6 +3,8 @@ package com.smartcare.healthapp;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.smartcare.healthapp.heartrate.HeartRateMonitor;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,7 +43,6 @@ public class FirstActivity extends Activity {
         public void handleMessage(Message msg) {  
             switch (msg.what) {      
             case 1:      
-            	Log.d("dd","timer");
 
             	// Switch views
                 vf.showNext();
@@ -97,7 +98,6 @@ public class FirstActivity extends Activity {
     
     TimerTask task = new TimerTask(){  
         public void run() {  
-        	Log.d("dd","timer2");
             Message message = new Message();      
             message.what = 1;  
             handler.sendMessage(message);    
@@ -128,6 +128,17 @@ public class FirstActivity extends Activity {
                 //Inform the user the button has been clicked
             	Intent intent = new Intent();
 		        intent.setClass(FirstActivity.this, JoinActivity.class);
+		        startActivity(intent);
+		        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);   
+            }
+        });
+        
+        findViewById(R.id.login).setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Inform the user the button has been clicked
+            	Intent intent = new Intent();
+		        intent.setClass(FirstActivity.this, HeartRateMonitor.class);
 		        startActivity(intent);
 		        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);   
             }

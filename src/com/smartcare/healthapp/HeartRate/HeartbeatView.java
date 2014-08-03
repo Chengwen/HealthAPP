@@ -1,4 +1,4 @@
-package com.smartcare.healthapp.HeartRate;
+package com.smartcare.healthapp.heartrate;
 
 import com.smartcare.healthapp.R;
 import com.smartcare.healthapp.R.drawable;
