@@ -229,7 +229,7 @@ public class HeartRateMonitor extends Activity {
         public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
             Camera.Parameters parameters = camera.getParameters();
             parameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
-            Camera.Size size = getSmallestPreviewSize(width, height, parameters);
+            Camera.Size size = getSmallestPreviewSize(300, 500, parameters);
             if (size != null) {
                 parameters.setPreviewSize(size.width, size.height);
                 Log.d(TAG, "Using width=" + size.width + " height=" + size.height);

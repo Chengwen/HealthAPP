@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" 
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent" 
+	android:layout_height="fill_parent"
+    android:background="@drawable/gradient_light_teal" 
 	android:id="@+id/layout">
 	<LinearLayout android:id="@+id/top"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:orientation="horizontal" 
         android:layout_width="fill_parent" 
-        android:layout_height="50dp">
+        android:layout_height="200dp">
         <TextView android:id="@+id/text"
             android:text="0"
             android:textSize="32dp"
@@ -28,8 +29,8 @@
 	    </RelativeLayout>
     </LinearLayout>
 	<SurfaceView android:id="@+id/preview"
-        android:layout_weight="1" 
-		android:layout_width="fill_parent"
-		android:layout_height="0dp">
+		android:layout_width="1dp"
+		android:layout_height="1dp"
+		>
 	</SurfaceView>
 </LinearLayout>
