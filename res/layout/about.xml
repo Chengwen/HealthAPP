@@ -87,18 +87,14 @@
 
         <EditText
             android:id="@+id/birthday"
-            android:layout_width="wrap_content"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="date" />
-        
-         <DatePicker
-            android:id="@+id/datePicker1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        
+            android:inputType="date" 
+            android:focusable="false"/>
+     
       </LinearLayout>
 
       <LinearLayout
