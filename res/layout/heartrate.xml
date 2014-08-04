@@ -19,7 +19,7 @@
 	        >
 	        <TextView android:id="@+id/textheart_rate_measure"
 	            android:textSize="28sp"
-	            android:text="@string/heart_rate_measure"
+	            android:text="@string/heart_rate_measurement"
             	android:textColor="#ffffff"
 	            android:layout_gravity="center_horizontal"
 	            android:gravity="center_horizontal"

@@ -16,7 +16,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/heart_rate_measure"
+        android:text="@string/heart_rate_measurement"
         android:textColor="#ffffff"
         android:textSize="28sp" >
     </TextView>

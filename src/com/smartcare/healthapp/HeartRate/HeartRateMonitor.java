@@ -9,6 +9,8 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
@@ -24,7 +26,7 @@ import android.widget.TextView;
  * for a red values and determine a heart beat.
  */
 public class HeartRateMonitor extends Activity {
-	
+
     private static final String TAG = "HeartRateMonitor";
     private static final AtomicBoolean processing = new AtomicBoolean(false);
 
@@ -40,6 +42,7 @@ public class HeartRateMonitor extends Activity {
     private static final int averageArraySize = 4;
     private static final int[] averageArray = new int[averageArraySize];
 
+    public static SoundPool soundPool;
     public static enum TYPE {
         GREEN, RED
     };
@@ -64,6 +67,8 @@ public class HeartRateMonitor extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.heartrate);
 
+		soundPool= new SoundPool(10,AudioManager.STREAM_SYSTEM,5);
+		soundPool.load(this,R.raw.heartbeat,1);
         preview = (SurfaceView) findViewById(R.id.preview);
         previewHolder = preview.getHolder();
         previewHolder.addCallback(surfaceCallback);
@@ -74,6 +79,8 @@ public class HeartRateMonitor extends Activity {
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, "DoNotDimScreen");
+        
+
     }
 
     /**
@@ -163,6 +170,10 @@ public class HeartRateMonitor extends Activity {
 
             // Transitioned from one state to another to the same
             if (newType != currentType) {
+            	if(newType==TYPE.RED)
+            	{
+            		soundPool.play(1,1, 1, 0, 0, 1);
+            	}
                 currentType = newType;
                 image.postInvalidate();
             }
