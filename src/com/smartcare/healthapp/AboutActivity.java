@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
-
 public class AboutActivity extends Activity{
 	int mYear,mMonth,mDay;
 	DatePickerDialog datePicker;
