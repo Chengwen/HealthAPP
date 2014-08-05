@@ -13,16 +13,17 @@
             android:id="@+id/getBPM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
             android:layout_weight="1"
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#615c5c" />
+            android:textColor="#000000" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="30dp"
             android:orientation="vertical" >
 
             <TextView
