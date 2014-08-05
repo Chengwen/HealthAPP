@@ -10,6 +10,7 @@ import com.github.mikephil.charting.data.ChartItem;
 import com.github.mikephil.charting.data.LineChartItem;
 import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +33,14 @@ public class ChartActivity extends Activity {
         ChartDataAdapter cda = new ChartDataAdapter(getApplicationContext(), list);
         
         lv.setAdapter(cda);
+        
+        
+        ListView lv2 = (ListView) findViewById(R.id.listView1);
+         Cursor cursor;
+		// Create the Adapter
+        BPMListAdapter bpmListAdapter = new BPMListAdapter(this,cursor);
     }
-
+    
     /** adapter that supports 3 different item types */
     private class ChartDataAdapter extends ArrayAdapter<ChartItem> {
         
@@ -91,7 +98,7 @@ public class ChartActivity extends Activity {
         m.add("Jul");
         m.add("Aug");
         m.add("Sep");
-        m.add("Okt");
+        m.add("Oct");
         m.add("Nov");
         m.add("Dec");
 
