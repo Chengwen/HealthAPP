@@ -122,18 +122,7 @@ public class FirstActivity extends Activity {
          
         timer.schedule(task, 0,2750);
 
-        findViewById(R.id.join).setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Inform the user the button has been clicked
-            	Intent intent = new Intent();
-		        intent.setClass(FirstActivity.this, JoinActivity.class);
-		        startActivity(intent);
-		        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);   
-            }
-        });
-        
-        findViewById(R.id.login).setOnClickListener( new View.OnClickListener() {
+        findViewById(R.id.HeartRateButton).setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Inform the user the button has been clicked
@@ -143,23 +132,19 @@ public class FirstActivity extends Activity {
 		        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);   
             }
         });
+        
+        findViewById(R.id.ViewResultButton).setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Inform the user the button has been clicked
+            	Intent intent = new Intent();
+		        intent.setClass(FirstActivity.this, ChartActivity.class);
+		        startActivity(intent);
+		        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);   
+            }
+        });
          
 
-        /*
-		setContentView(R.layout.join); 
-		Button button = (Button)findViewById(R.id.button1);
-		button.setOnClickListener(new View.OnClickListener() {  
-		    @Override
-		    public void onClick(View v) {
-		        Intent intent = new Intent();
-		        intent.setClass(MainActivity.this, PageBActivity.class);
-		        startActivity(intent);
-		        //设置切换动画，从右边进入，左边退出
-		        overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);                
-		    }
-		});
-        */
-        
 	}
 
 

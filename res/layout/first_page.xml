@@ -28,7 +28,7 @@
 
         <ViewFlipper
             android:id="@+id/viewFlipper1"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
@@ -54,24 +54,24 @@
         </ViewFlipper>
 
         <Button
-            android:id="@+id/join"
+            android:id="@+id/HeartRateButton"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp"
             android:background="@color/transparent_background"
-            android:text="@string/join"
+            android:text="@string/heart_rate_measurement"
             android:textColor="#ffffff"
             android:textSize="25sp" />
         
         <Button
-            android:id="@+id/login"
+            android:id="@+id/ViewResultButton"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_marginBottom="50dp"
             android:layout_marginTop="5dp"
             android:background="@color/transparent_background"
-            android:text="@string/login"
+            android:text="@string/view_result"
             android:textColor="#ffffff"
             android:textSize="25sp" />
 

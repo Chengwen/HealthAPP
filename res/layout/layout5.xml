@@ -10,15 +10,7 @@
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android1:src="@drawable/red_icon" />
+        android1:src="@drawable/help2" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="80/KG"
-        android:textColor="#ffffff"
-        android:textSize="28sp" >
-    </TextView>
 
 </LinearLayout>

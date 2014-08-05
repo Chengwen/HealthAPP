@@ -10,15 +10,7 @@
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android1:src="@drawable/green_icon" />
+        android1:src="@drawable/help1" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="BMI"
-        android:textColor="#ffffff"
-        android:textSize="28sp" >
-    </TextView>
 
 </LinearLayout>

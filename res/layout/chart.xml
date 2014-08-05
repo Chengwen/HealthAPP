@@ -9,8 +9,8 @@
         android:orientation="vertical" 
         android:layout_width="fill_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         >
         <TextView android:id="@+id/textheart_rate_measure"
             android:textSize="28sp"
