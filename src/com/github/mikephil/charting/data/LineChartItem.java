@@ -61,6 +61,7 @@ public class LineChartItem extends ChartItem {
 		holder.chart.setDescription("");
 		holder.chart.setDrawVerticalGrid(false);
 		holder.chart.setDrawGridBackground(false);
+		//holder.chart.setScaleMinima(40,40);
 		//holder.chart.setBackgroundColor(0xffffffff);
 	
 		XLabels xl = holder.chart.getXLabels();

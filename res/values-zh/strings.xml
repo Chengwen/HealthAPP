@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">手机心率检测器</string>
+    <string name="heart_rate_measurement">测量心率</string>
+    <string name="view_result">查看结果</string>
+    <string name="measuring">测量中</string>
+    <string name="action_settings">设置中</string>
+    <string name="join">加入</string>
+    <string name="login">登陆</string>
+    <string name="no_data">暂无数据，快去测量一下吧~</string>
+    <string name="forgotpwd"><u>忘记密码?</u></string>
+    <string name="continue1">继续</string>
+    <string name="email">Email</string>
+    <string name="pwd">密码</string>
+    <string name="textView_name">名字</string>
+    <string name="textView_gender">性别</string>
+    <string name="textView_birthday">生日</string>
+    <string name="textView_height">身高</string>
+    <string name="textView_weight">体重 </string>
+    <string name="textView_about">关于你</string>
+    <string name="textView_logged_data">测量心率数据记录</string>
+    
+    
+    <string-array name="spinner_height">
+        <item>英尺</item>
+        <item>厘米</item>
+    </string-array>
+    
+    <string-array name="spinner_weight">
+        <item>磅</item>
+        <item>公斤</item>
+    </string-array>
+
+</resources>
