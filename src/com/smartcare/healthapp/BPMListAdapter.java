@@ -2,6 +2,7 @@ package com.smartcare.healthapp;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +38,8 @@ public class BPMListAdapter extends BaseAdapter{
                     
                     // fetch the sender number and sms body from cursor
                     String bpm=cursor.getString(2)+" BPM";
-    		 		String date = new java.text.SimpleDateFormat("dd/MM").format(new java.util.Date(cursor.getInt(1) * 1000));
-    		 		String time = new java.text.SimpleDateFormat("HH:mm").format(new java.util.Date(cursor.getInt(1) * 1000));
+    		 		String date = new java.text.SimpleDateFormat("dd/LLL").format(new java.util.Date(cursor.getInt(1) * 1000L));
+    		 		String time = new java.text.SimpleDateFormat("HH:mm").format(new java.util.Date(cursor.getInt(1) * 1000L));
                    
                     // get the reference of textViews
                     TextView textViewBPM = (TextView)view.findViewById(R.id.getBPM);

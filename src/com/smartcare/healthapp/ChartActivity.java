@@ -44,7 +44,7 @@ public class ChartActivity extends Activity {
  		DataHandler d=new DataHandler(getApplicationContext());
  		d.open();
  		
- 		//d.insertData( 2.1f, 1, "");
+ 		d.insertData( 2.1f, 1, "");
  		Cursor cursor=d.returnData();
 
 		// Create the Adapter
@@ -96,7 +96,7 @@ public class ChartActivity extends Activity {
 		if (cursor!=null &&cursor.getCount()>0) {
 			cursor.moveToPosition(cursor.getCount()-1);
 		   do {
-		 		String date = new java.text.SimpleDateFormat("dd/MM").format(new java.util.Date(cursor.getInt(1) * 1000));
+		 		String date = new java.text.SimpleDateFormat("yyyy dd/LLL").format(new java.util.Date(cursor.getInt(1)*1000L));
 		 		
 		 		//Prevent only one data get a error
 		 		if(cursor.getCount()==1)
