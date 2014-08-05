@@ -1,12 +1,15 @@
 package com.smartcare.healthapp;
 
+import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.smartcare.database.DataHandler;
 import com.smartcare.healthapp.heartrate.HeartRateMonitor;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -111,6 +114,22 @@ public class FirstActivity extends Activity {
 	    this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.first_page); 
 		
+		DataHandler d=new DataHandler(getApplicationContext());
+		d.open();
+		
+		d.insertData( 1.1f, 1, "");
+		Cursor cursor=d.returnData();
+
+       // looping through all rows and adding to list
+       if (cursor!=null && cursor.moveToFirst()) {
+           do {
+        	   Log.i("i",cursor.getString(1)); 
+        	   Log.i("i",cursor.getString(2));
+        	   Log.i("i",cursor.getString(3));
+        	   Log.i("i",cursor.getString(4));
+           } while (cursor.moveToNext());
+       }
+		
 	     // 定义ViewFlipper
         vf = (ViewFlipper) findViewById(R.id.viewFlipper1);
 
@@ -119,8 +138,7 @@ public class FirstActivity extends Activity {
         // 设置切出动画
         vf.setOutAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out_left));
 
-         
-        timer.schedule(task, 0,2750);
+          timer.schedule(task, 0,2750);
 
         findViewById(R.id.HeartRateButton).setOnClickListener( new View.OnClickListener() {
             @Override

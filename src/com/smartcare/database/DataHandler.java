@@ -10,10 +10,12 @@ public class DataHandler {
 	
 	public static final String ID = "id";
 	public static final String TIME = "time";
-	public static final String BPM = "bpm";
-	public static final String TABLE_NAME = "mytable";
+	public static final String VALUE = "value";
+	public static final String TYPE = "type";
+	public static final String CATEGORY = "category";
+	public static final String TABLE_NAME = "value";
 	public static final String DATABASE_NAME = "bpmdatabase";
-	public static final String TABLE_CREATE = "create table mytable";
+	public static final String TABLE_CREATE = "CREATE TABLE `"+TABLE_NAME+"` ( 	`id` INTEGER PRIMARY KEY AUTOINCREMENT,	`time`	INTEGER NOT NULL,	`value`	NUMERIC,	`type`	INTEGER,	`category`	TEXT);";
 	
 	public static final int DATABASE_VERSION = 1;
 	
@@ -43,7 +45,7 @@ public class DataHandler {
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 			// TODO Auto-generated method stub
 			
-			db.execSQL("DROP TABLE IF EXISTS mytable");
+			db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
 			onCreate(db);
 			
 		}		
@@ -59,16 +61,18 @@ public class DataHandler {
 		dbhelper.close();
 	}
 	
-	public long insertData(String id, String time, String bpm){
-		ContentValues content = new ContentValues();
-		content.put(ID, id);
-		content.put(TIME, time);
-		content.put(BPM, bpm);
+	public long insertData(float value, int type, String category){
+		ContentValues content = new ContentValues(); 
+		int unixTime = (int)(System.currentTimeMillis() / 1000L);
+		content.put(TIME, unixTime);
+		content.put(VALUE, value);
+		content.put(TYPE, type);
+		content.put(CATEGORY, category);
 		return db.insertOrThrow(TABLE_NAME, null, content);
 	}
 	
 	public Cursor returnData(){
-		return db.query(TABLE_NAME, new String[]{ID, TIME, BPM}, null, null, null, null, null);
+		return db.query(TABLE_NAME, new String[]{ID, TIME, VALUE,TYPE,CATEGORY}, null, null, null, null, null);
 	}
 
 }
