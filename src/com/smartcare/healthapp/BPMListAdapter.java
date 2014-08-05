@@ -36,7 +36,7 @@ public class BPMListAdapter extends BaseAdapter{
                     cursor.moveToPosition(position);
                     
                     // fetch the sender number and sms body from cursor
-                    String bpm=cursor.getString(2);
+                    String bpm=cursor.getString(2)+" BPM";
     		 		String date = new java.text.SimpleDateFormat("dd/MM").format(new java.util.Date(cursor.getInt(1) * 1000));
     		 		String time = new java.text.SimpleDateFormat("HH:mm").format(new java.util.Date(cursor.getInt(1) * 1000));
                    
