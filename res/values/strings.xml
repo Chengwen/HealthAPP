@@ -18,6 +18,8 @@
     <string name="textView_height">Height</string>
     <string name="textView_weight">Weight</string>
     <string name="textView_about">About you</string>
+    <string name="textView_logged_data">Logged Heart Rate</string>
+    
     
     <string-array name="spinner_height">
         <item>feet</item>
