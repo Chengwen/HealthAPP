@@ -72,7 +72,7 @@ public class DataHandler {
 	}
 	
 	public Cursor returnData(){
-		return db.query(TABLE_NAME, new String[]{ID, TIME, VALUE,TYPE,CATEGORY}, null, null, null, null, null);
+		return db.query(TABLE_NAME, new String[]{ID, TIME, VALUE,TYPE,CATEGORY}, null, null, null, null, "id desc");
 	}
 
 }
