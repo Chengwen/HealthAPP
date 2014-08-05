@@ -16,5 +16,4 @@
         android:text="@string/textView_logged_data"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-
 </LinearLayout>
