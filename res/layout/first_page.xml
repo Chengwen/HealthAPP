@@ -40,17 +40,6 @@
                 android:id="@+id/layout2"
                 layout="@layout/layout2" />
 
-            <include
-                android:id="@+id/layout3"
-                layout="@layout/layout3" />
-
-            <include
-                android:id="@+id/layout4"
-                layout="@layout/layout4" />
-
-            <include
-                android:id="@+id/layout5"
-                layout="@layout/layout5" />
         </ViewFlipper>
 
         <Button
