@@ -8,10 +8,13 @@ import com.github.mikephil.charting.data.DataSet;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.ChartItem;
 import com.github.mikephil.charting.data.LineChartItem;
+import com.smartcare.database.DataHandler;
+
 import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -35,10 +38,20 @@ public class ChartActivity extends Activity {
         lv.setAdapter(cda);
         
         
-        ListView lv2 = (ListView) findViewById(R.id.listView1);
-         Cursor cursor;
+        ListView listViewBPM = (ListView) findViewById(R.id.listView1);
+         BPMListAdapter bpmListAdapter;
+
+ 		DataHandler d=new DataHandler(getApplicationContext());
+ 		d.open();
+ 		
+ 		//d.insertData( 1.1f, 1, "");
+ 		Cursor cursor=d.returnData();
+
 		// Create the Adapter
-        BPMListAdapter bpmListAdapter = new BPMListAdapter(this,cursor);
+         bpmListAdapter=new BPMListAdapter(this,cursor);
+         
+      // Set The Adapter to ListView
+         listViewBPM.setAdapter(bpmListAdapter);
     }
     
     /** adapter that supports 3 different item types */
