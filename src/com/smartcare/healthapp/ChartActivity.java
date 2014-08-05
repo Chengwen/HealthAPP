@@ -44,7 +44,7 @@ public class ChartActivity extends Activity {
  		DataHandler d=new DataHandler(getApplicationContext());
  		d.open();
  		
- 		//d.insertData( 1.1f, 1, "");
+ 		d.insertData( 1.1f, 1, "");
  		Cursor cursor=d.returnData();
 
 		// Create the Adapter
@@ -87,13 +87,20 @@ public class ChartActivity extends Activity {
 
         ArrayList<Entry> entries = new ArrayList<Entry>();
 
+
+ 		DataHandler d=new DataHandler(getApplicationContext());
+ 		d.open();
+ 		
+ 		//d.insertData( 1.1f, 1, "");
+ 		Cursor cursor=d.returnData();
+ 		
         for (int i = 0; i < 12; i++) {
             entries.add(new Entry((int) (Math.random() * 70) + 30, i));
         }
 
-        DataSet d = new DataSet(entries, "BPM");
+        DataSet d1 = new DataSet(entries, "BPM");
 
-        ChartData cd = new ChartData(getMonths(), d);
+        ChartData cd = new ChartData(getMonths(), d1);
         return cd;
     }
     
