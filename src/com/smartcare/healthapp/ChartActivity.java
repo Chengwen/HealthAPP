@@ -86,42 +86,29 @@ public class ChartActivity extends Activity {
     private ChartData generateData(int cnt) {
 
         ArrayList<Entry> entries = new ArrayList<Entry>();
+        ArrayList<String> m = new ArrayList<String>();
 
 
  		DataHandler d=new DataHandler(getApplicationContext());
  		d.open();
  		
- 		//d.insertData( 1.1f, 1, "");
  		Cursor cursor=d.returnData();
- 		
-        for (int i = 0; i < 12; i++) {
-            entries.add(new Entry((int) (Math.random() * 70) + 30, i));
-        }
+ 		int i=0;
+		if (cursor!=null && cursor.moveToFirst()) {
+		   do {
+		 		entries.add(new Entry(cursor.getInt(2), i));
+		 		m.add(cursor.getString(1));
+			   	i++;
+		       } while (cursor.moveToNext());
+		   }
+        
 
         DataSet d1 = new DataSet(entries, "BPM");
 
-        ChartData cd = new ChartData(getMonths(), d1);
+        ChartData cd = new ChartData( m, d1);
         return cd;
     }
     
     
 
-    private ArrayList<String> getMonths() {
-
-        ArrayList<String> m = new ArrayList<String>();
-        m.add("Jan");
-        m.add("Feb");
-        m.add("Mar");
-        m.add("Apr");
-        m.add("May");
-        m.add("Jun");
-        m.add("Jul");
-        m.add("Aug");
-        m.add("Sep");
-        m.add("Oct");
-        m.add("Nov");
-        m.add("Dec");
-
-        return m;
-    }
 }
