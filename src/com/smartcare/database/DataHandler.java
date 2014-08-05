@@ -57,7 +57,7 @@ public class DataHandler {
 		return this;
 	}
 	
-	public void colse(){
+	public void close(){
 		dbhelper.close();
 	}
 	

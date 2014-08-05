@@ -1,60 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" 
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-    android:background="@drawable/gradient_light_teal" 
-	android:id="@+id/layout">
-	<LinearLayout android:id="@+id/top"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient_light_teal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:orientation="vertical" 
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content"> 
+        android:paddingRight="10dp" >
+
         <LinearLayout
-	        android:orientation="vertical" 
-	        android:layout_width="fill_parent"
-	        android:layout_height="40dp"
-	        android:layout_marginTop="25dp"
-	        >
-	        <TextView android:id="@+id/textheart_rate_measure"
-	            android:textSize="28sp"
-	            android:text="@string/heart_rate_measurement"
-            	android:textColor="#ffffff"
-	            android:layout_gravity="center_horizontal"
-	            android:gravity="center_horizontal"
-	            android:layout_width="fill_parent"
-	            android:layout_height="40dp">        
-	        </TextView>
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textheart_rate_measure"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/heart_rate_measurement"
+                android:textColor="#ffffff"
+                android:textSize="28sp" >
+            </TextView>
         </LinearLayout>
+
         <LinearLayout
-	        android:orientation="vertical" 
-	        android:layout_width="fill_parent"
-	        android:layout_height="168dp">
-	        <com.smartcare.healthapp.heartrate.HeartbeatView android:id="@+id/image"
-	            android:layout_width="wrap_content"
-		        android:layout_height="wrap_content">
-		    </com.smartcare.healthapp.heartrate.HeartbeatView>
-	    </LinearLayout>
+            android:layout_width="fill_parent"
+            android:layout_height="168dp"
+            android:orientation="vertical" >
+
+            <com.smartcare.healthapp.heartrate.HeartbeatView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </com.smartcare.healthapp.heartrate.HeartbeatView>
+        </LinearLayout>
+
         <LinearLayout
-	        android:orientation="vertical" 
-	        android:layout_width="fill_parent"
-	        android:layout_height="40dp"
-	        >
-	        <TextView android:id="@+id/text"
-	            android:textSize="28sp"
-	            android:text="@string/measuring"
-	            android:layout_gravity="center_horizontal"
-	            android:gravity="center_horizontal"
-	            android:layout_width="fill_parent"
-           		android:textColor="#ffffff"
-	            android:layout_height="40dp">        
-	        </TextView>
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/measuring"
+                android:textColor="#ffffff"
+                android:textSize="28sp" >
+            </TextView>
         </LinearLayout>
     </LinearLayout>
-	<SurfaceView android:id="@+id/preview"
-		android:layout_width="1dp"
-		android:layout_height="1dp"
-		>
-	</SurfaceView>
+
+    <SurfaceView
+        android:id="@+id/preview"
+        android:layout_width="1dp"
+        android:layout_height="1dp" >
+    </SurfaceView>
+
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical" >
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:src="@drawable/help2" />
+       </LinearLayout>
 </LinearLayout>

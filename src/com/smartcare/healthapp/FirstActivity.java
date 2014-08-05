@@ -27,8 +27,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
-public class FirstActivity extends Activity {
 
+public class FirstActivity extends Activity {
+	public static FirstActivity fa;
     Timer timer = new Timer();  
     ViewFlipper vf;
     int currLayout=0;
@@ -113,11 +114,14 @@ public class FirstActivity extends Activity {
 		 //Remove title bar
 	    this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.first_page); 
+
+		fa=this;
+      
 		
 		DataHandler d=new DataHandler(getApplicationContext());
 		d.open();
 		
-		d.insertData( 1.1f, 1, "");
+		//d.insertData( 1.1f, 1, "");
 		Cursor cursor=d.returnData();
 
        // looping through all rows and adding to list

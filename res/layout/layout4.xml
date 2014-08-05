@@ -7,10 +7,10 @@
     android:orientation="vertical" >
 
     <ImageView
-        android1:layout_width="wrap_content"
-        android1:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android1:src="@drawable/help2" />
+        android:src="@drawable/help2" />
 
 
 </LinearLayout>

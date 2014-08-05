@@ -2,10 +2,14 @@ package com.smartcare.healthapp.heartrate;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import com.smartcare.database.DataHandler;
+import com.smartcare.healthapp.ChartActivity;
+import com.smartcare.healthapp.FirstActivity;
 import com.smartcare.healthapp.R;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
@@ -35,6 +39,7 @@ public class HeartRateMonitor extends Activity {
     private static Camera camera = null;
     private static View image = null;
     private static TextView text = null;
+    private static int first =0;
 
     private static WakeLock wakeLock = null;
 
@@ -68,7 +73,7 @@ public class HeartRateMonitor extends Activity {
         setContentView(R.layout.heartrate);
 
 		soundPool= new SoundPool(10,AudioManager.STREAM_SYSTEM,5);
-		soundPool.load(this,R.raw.heartbeat,1);
+		soundPool.load(this,R.raw.beat,1);
         preview = (SurfaceView) findViewById(R.id.preview);
         previewHolder = preview.getHolder();
         previewHolder.addCallback(surfaceCallback);
@@ -206,7 +211,26 @@ public class HeartRateMonitor extends Activity {
                     }
                 }
                 int beatsAvg = (beatsArrayAvg / beatsArrayCnt);
-                text.setText(String.valueOf(beatsAvg)+ " bpm");
+                if(first==0)
+            	{
+                	first=beatsAvg;
+            	}
+                else
+                {
+                	first=0;
+                	DataHandler d=new DataHandler(FirstActivity.fa.getApplicationContext() );
+            		d.open();
+            		d.insertData( beatsAvg, 1, "");
+                    Log.d("Insert BPM",String.valueOf(beatsAvg));
+            		d.close();
+            		
+            		Intent intent = new Intent();
+    		        intent.setClass(FirstActivity.fa, ChartActivity.class);
+    		        FirstActivity.fa.startActivity(intent);
+    		        FirstActivity.fa.overridePendingTransition(R.anim.fade_in, R.anim.fade_out);  
+    		        
+                }
+                text.setText(String.valueOf(beatsAvg)+ " BPM");
                 startTime = System.currentTimeMillis();
                 beats = 0;
             }
