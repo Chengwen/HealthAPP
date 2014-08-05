@@ -8,18 +8,20 @@
        <LinearLayout
         android:orientation="vertical" 
         android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         >
-        <TextView android:id="@+id/textheart_rate_measure"
-            android:textSize="28sp"
-            android:text="@string/heart_rate_measurement"
-           	android:textColor="#615c5c"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
+
+        <TextView
+            android:id="@+id/textheart_rate_measure"
             android:layout_width="fill_parent"
-            android:layout_height="40dp">        
+            android:layout_height="60dp"
+            android:background="#ff50a5a5"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/heart_rate_measurement"
+            android:textColor="#ffffff"
+            android:textSize="24sp" >
+        
         </TextView>
        </LinearLayout>
     <ListView
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/textView_logged_data"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#615c5c" />
