@@ -45,6 +45,7 @@ public class ChartActivity extends Activity {
  		d.open();
  		
  		d.insertData( 1.1f, 1, "");
+ 		d.insertData( 2.1f, 1, "");
  		Cursor cursor=d.returnData();
 
 		// Create the Adapter

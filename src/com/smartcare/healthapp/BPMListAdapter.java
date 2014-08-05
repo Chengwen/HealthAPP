@@ -36,9 +36,9 @@ public class BPMListAdapter extends BaseAdapter{
                     cursor.moveToPosition(position);
                     
                     // fetch the sender number and sms body from cursor
-                    String bpm=cursor.getString(cursor.getColumnIndex("value"));
-                    String date=cursor.getString(cursor.getColumnIndex("date"));
-                    String time=cursor.getString(cursor.getColumnIndex("time"));
+                    String bpm=cursor.getString(2);
+                    String date=cursor.getString(1);
+                    String time=cursor.getString(1);
                    
                     // get the reference of textViews
                     TextView textViewBPM = (TextView)view.findViewById(R.id.getBPM);
