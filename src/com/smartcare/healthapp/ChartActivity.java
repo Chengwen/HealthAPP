@@ -98,8 +98,15 @@ public class ChartActivity extends Activity {
 		if (cursor!=null && cursor.moveToFirst()) {
 		   do {
 		 		entries.add(new Entry(cursor.getInt(2), i));
-		 		m.add(cursor.getString(1));
+		 		String date = new java.text.SimpleDateFormat("dd/MM").format(new java.util.Date(cursor.getInt(1) * 1000));
+		 				
+		 		m.add(date);
 			   	i++;
+			   	
+			   	//last 30 records
+			   	if(i>30)
+			   		break;
+			   	
 		       } while (cursor.moveToNext());
 		   }
         
