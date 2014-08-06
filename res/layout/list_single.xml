@@ -38,9 +38,11 @@
                 android:id="@+id/getTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="Small Text"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="#615c5c" />
+
         </LinearLayout>
     </LinearLayout>
 
